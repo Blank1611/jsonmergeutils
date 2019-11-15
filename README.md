@@ -1,7 +1,7 @@
 # jsonmergeutils
 Merges a series of files containing JSON array of Objects into a single file containing one JSON object.
 
-Consider a file with name [tes1.json](SampleJsonfiles/tes1.json) with contents(Refer next section to know more about the arguments accepted):
+Consider a file with name [tes1.json](SampleJsonfiles/tes1.json) with contents (Refer next section to know more about the arguments accepted):
 ```
 {
 	"states": [{
@@ -48,7 +48,7 @@ this file will be named according to the Output Prefix given by the user, [res1.
      Base Name as a prefix, and a counter as a suffix.
      
      e.g for output prefix 'merge' output files will be named as merge1.json, merge2.json, merge3.json.....
-    * **Max File Size:** The maximum file size (in bytes) that each merged file should have.
+    * **Max File Size:** The maximum file size (**in bytes**) that each merged file should have.
   
 * _Can merge json files containing multiple root keys given that they are of type 'array'._ 
 
@@ -110,3 +110,23 @@ The program will create a 'MergedFiles' folder and store all the merged files in
   ```python
   #self.redundant_obj()
   ```
+  
+  ### Limitations:
+  * Files will be merged only when the size of base file is less than the MAX FILE SIZE and the size of future merged json object is less than MAX FILE SIZE.
+   i.e 
+   
+   For e.g. 
+   
+   A json file contains data of size 300 bytes, the json object from this json file will be referenced as **_head_**   
+   
+   and the **_base_** json object which has been formed by merging previous json files has size of 400 bytes 
+   
+   and the **_MAX FILE SIZE_** is 600 bytes
+   
+   So the size of base is less than MAX FILE SIZE, but if it were to be merged with head then the total size becomes 700 bytes which is more than the MAX FILE SIZE.
+   
+   The head will **not** be merged with base at all, not even partially.
+   
+   The base will be stored in a file which will have size 400 bytes and the **head** object will be made the **new base** object to be merged with next file.
+  * The output json file by default will not contain pretty json, since indentation increases the size of json file drastically.
+  i.e a json file without indentation for e.g. is 240 bytes, with indentation of level 2 the file size will increase above 600 bytes.
