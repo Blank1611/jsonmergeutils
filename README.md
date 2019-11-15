@@ -54,7 +54,7 @@ this file will be named according to the Output Prefix given by the user, [res1.
 
 * _Since the merged json files are encoded in UTF-8, it can also support any unicode characters._
 
-* _Removes Redundant json objects if any exst within the array._
+* _Removes Redundant json objects if any exist within the array._
 
 ## **Dependencies:**
 
