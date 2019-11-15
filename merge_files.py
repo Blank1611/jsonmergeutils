@@ -57,7 +57,7 @@ class Merge:
                 self.redundant_obj()
             else:
                 path = os.path.join(self.output_path, self.output_prefix+str(self.counter)+'.json')
-                with open(path, 'w') as op:
+                with open(path, 'w', encoding='utf-8') as op:
                     json.dump(self.base, op, ensure_ascii=False)
                 self.counter += 1
                 self.base = None
@@ -65,5 +65,5 @@ class Merge:
         else:
             if self.base:
                 path = os.path.join(self.output_path, self.output_prefix+str(self.counter)+'.json')
-                with open(path, 'w') as op:
+                with open(path, 'w', encoding='utf-8') as op:
                     json.dump(self.base, op, ensure_ascii=False)
