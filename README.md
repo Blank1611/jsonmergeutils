@@ -49,7 +49,7 @@ Or you can load it in an IDE and run it.
 
 ![](https://github.com/Blank1611/jsonmergeutils/blob/master/screenshot/3rd.PNG)
 
-- Incase the merged files are to be stored in a separate folder change [line 48](https://github.com/Blank1611/jsonmergeutils/blob/b9033bb92af9888a4e998ac21753e270cf4ecd91/jsonmerge_utils.py#L48) in [jsonmerge_utils](jsonmerge_utils.py)
+- Incase the merged files are to be stored in a separate folder change [line 47](https://github.com/Blank1611/jsonmergeutils/blob/0d0f8488754141d11d9f70d88090d34bea52424c/jsonmerge_utils.py#L47) in [jsonmerge_utils](jsonmerge_utils.py)
 
 from 
 ```python
