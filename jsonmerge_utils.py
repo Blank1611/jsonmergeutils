@@ -11,17 +11,17 @@ from merge_files import merge_object
 from merge_files import Merge
 
 
-#def output_folder(data_dir):
-#    """
-#    Creates new output folder for merged files to be stored in
-#    """
-#    i = 1
-#    path = os.path.join(data_dir, 'MergedFiles')
-#    while os.path.exists(path):
-#        path = os.path.join(data_dir, 'MergedFiles'+str(i))
-#        i += 1
-#    os.mkdir(path)
-#    return path
+def output_folder(data_dir):
+    """
+    Creates new output folder for merged files to be stored in
+    """
+    i = 1
+    path = os.path.join(data_dir, 'MergedFiles')
+    while os.path.exists(path):
+        path = os.path.join(data_dir, 'MergedFiles'+str(i))
+        i += 1
+    os.mkdir(path)
+    return path
 
 def file_list(data_dir, input_prefix):
     """
@@ -43,7 +43,6 @@ def main():
     output_prefix = input('O/P Prefix: ')
     max_file_size = int(input('Max File Size: '))
     end = False
-    #output_path = os.path.join(output_folder(DATADIR), OUTPUT_PREFIX)
     merger, root_keys = merge_object(os.path.join(data_dir, input_prefix+str(1)+'.json'))
     merge = Merge(data_dir, output_prefix, max_file_size, merger, root_keys)
     count = 0
