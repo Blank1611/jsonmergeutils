@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "North Dakota",
+      "abbreviation": "ND",
+      "area_codes": ["701"]
+    },
+    {
+      "name": "Ohio",
+      "abbreviation": "OH",
+      "area_codes": ["216", "220", "234", "330", "380", "419", "440", "513", "567", "614", "740", "937"]
+    }
+]}

@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Nevada",
+      "abbreviation": "NV",
+      "area_codes": ["702", "725", "775"]
+    },
+    {
+      "name": "New Hampshire",
+      "abbreviation": "NH",
+      "area_codes": ["603"]
+    }
+]}

@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Maine",
+      "abbreviation": "ME",
+      "area_codes": ["207"]
+    },
+    {
+      "name": "Maryland",
+      "abbreviation": "MD",
+      "area_codes": ["240", "301", "410", "443", "667"]
+    }
+]}

@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Connecticut",
+      "abbreviation": "CT",
+      "area_codes": ["203", "475", "860", "959"]
+    },
+    {
+      "name": "Delaware",
+      "abbreviation": "DE",
+      "area_codes": ["302"]
+    }
+]}

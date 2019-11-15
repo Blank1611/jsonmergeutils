@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Hawaii",
+      "abbreviation": "HI",
+      "area_codes": ["808"]
+    },
+    {
+      "name": "Idaho",
+      "abbreviation": "ID",
+      "area_codes": ["208"]
+    }
+]}

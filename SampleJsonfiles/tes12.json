@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Minnesota",
+      "abbreviation": "MN",
+      "area_codes": ["218", "320", "507", "612", "651", "763", "952"]
+    },
+    {
+      "name": "Mississippi",
+      "abbreviation": "MS",
+      "area_codes": ["228", "601", "662", "769"]
+    }
+]}

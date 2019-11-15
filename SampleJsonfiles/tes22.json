@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Utah",
+      "abbreviation": "UT",
+      "area_codes": ["385", "435", "801"]
+    },
+    {
+      "name": "Vermont",
+      "abbreviation": "VT",
+      "area_codes": ["802"]
+    }
+]}

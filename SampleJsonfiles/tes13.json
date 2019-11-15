@@ -1,0 +1,17 @@
+{"states": [
+{
+      "name": "Missouri",
+      "abbreviation": "MO",
+      "area_codes": ["314", "417", "573", "636", "660", "816"]
+    },
+    {
+      "name": "Montana",
+      "abbreviation": "MT",
+      "area_codes": ["406"]
+    },
+    {
+      "name": "Nebraska",
+      "abbreviation": "NE",
+      "area_codes": ["308", "402", "531"]
+    }
+]}

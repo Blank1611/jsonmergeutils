@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "South Carolina",
+      "abbreviation": "SC",
+      "area_codes": ["803", "843", "854", "864"]
+    },
+    {
+      "name": "South Dakota",
+      "abbreviation": "SD",
+      "area_codes": ["605"]
+    }
+]}

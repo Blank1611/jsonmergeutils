@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Iowa",
+      "abbreviation": "IA",
+      "area_codes": ["319", "515", "563", "641", "712"]
+    },
+    {
+      "name": "Kansas",
+      "abbreviation": "KS",
+      "area_codes": ["316", "620", "785", "913"]
+    }
+]}

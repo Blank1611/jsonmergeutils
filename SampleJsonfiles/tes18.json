@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Oklahoma",
+      "abbreviation": "OK",
+      "area_codes": ["405", "539", "580", "918"]
+    },
+    {
+      "name": "Oregon",
+      "abbreviation": "OR",
+      "area_codes": ["458", "503", "541", "971"]
+    }
+]}

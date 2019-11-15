@@ -1,0 +1,17 @@
+{"states": [
+{
+      "name": "West Virginia",
+      "abbreviation": "WV",
+      "area_codes": ["304", "681"]
+    },
+    {
+      "name": "Wisconsin",
+      "abbreviation": "WI",
+      "area_codes": ["262", "414", "534", "608", "715", "920"]
+    },
+    {
+      "name": "Wyoming",
+      "abbreviation": "WY",
+      "area_codes": ["307"]
+    }
+]}

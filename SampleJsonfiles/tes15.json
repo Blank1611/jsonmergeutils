@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "New Jersey",
+      "abbreviation": "NJ",
+      "area_codes": ["201", "551", "609", "732", "848", "856", "862", "908", "973"]
+    },
+    {
+      "name": "New Mexico",
+      "abbreviation": "NM",
+      "area_codes": ["505", "575"]
+    }
+]}

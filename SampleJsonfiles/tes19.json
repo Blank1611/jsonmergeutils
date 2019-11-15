@@ -1,0 +1,12 @@
+{"states": [
+{
+      "name": "Pennsylvania",
+      "abbreviation": "PA",
+      "area_codes": ["215", "267", "272", "412", "484", "570", "610", "717", "724", "814", "878"]
+    },
+    {
+      "name": "Rhode Island",
+      "abbreviation": "RI",
+      "area_codes": ["401"]
+    }
+]}
