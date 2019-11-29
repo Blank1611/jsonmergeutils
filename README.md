@@ -1,4 +1,6 @@
-# jsonmergeutils https://img.shields.io/github/license/Blank1611/jsonmergeutils
+# jsonmergeutils 
+https://img.shields.io/github/license/Blank1611/jsonmergeutils
+
 Merges a series of files containing JSON array of Objects into a single file containing one JSON object.
 
 Consider a file with name [tes1.json](SampleJsonfiles/tes1.json) with contents (Refer next section to know more about the arguments accepted):
