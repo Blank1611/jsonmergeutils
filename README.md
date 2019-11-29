@@ -1,5 +1,5 @@
 # jsonmergeutils 
-https://img.shields.io/github/license/Blank1611/jsonmergeutils
+![](https://img.shields.io/github/license/Blank1611/jsonmergeutils)
 
 Merges a series of files containing JSON array of Objects into a single file containing one JSON object.
 
