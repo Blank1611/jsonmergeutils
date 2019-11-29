@@ -54,7 +54,7 @@ class Merge:
         if not end:
             if (base_size < self.max_file_size) and ((base_size+sizeof(head)) <= self.max_file_size):
                 self.base = (self.merger).merge(self.base, head)
-                self.redundant_obj()
+                #self.redundant_obj()
             else:
                 path = os.path.join(self.output_path, self.output_prefix+str(self.counter)+'.json')
                 with open(path, 'w', encoding='utf-8') as op:
