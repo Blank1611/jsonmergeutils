@@ -28,11 +28,11 @@ def file_list(data_dir, input_prefix):
     Lists the json files with the given input prefix
     """
     i = 1
-    path = os.path.join(data_dir, input_prefix+str(i)+'.json')
+    path = os.path.join(data_dir, '{}{}{}'.format(input_prefix, i, '.json'))
     while os.path.isfile(path):
         yield path
         i += 1
-        path = os.path.join(data_dir, input_prefix+str(i)+'.json')
+        path = os.path.join(data_dir, '{}{}{}'.format(input_prefix, i, '.json'))
 
 def main():
     """
@@ -43,7 +43,7 @@ def main():
     output_prefix = input('O/P Prefix: ')
     max_file_size = int(input('Max File Size: '))
     end = False
-    merger, root_keys = merge_object(os.path.join(data_dir, input_prefix+str(1)+'.json'))
+    merger, root_keys = merge_object(os.path.join(data_dir, '{}{}'.format(input_prefix,'1.json')))
     merge = Merge(data_dir, output_prefix, max_file_size, merger, root_keys)
     count = 0
     for i in file_list(data_dir, input_prefix):
