@@ -50,6 +50,7 @@ def main():
         merge = Merge(path_creator(data_dir, input_prefix),
                       path_creator(data_dir, output_prefix),
                       max_file_size)
+
         merge.merge()
 
     except FileNotFoundError:
