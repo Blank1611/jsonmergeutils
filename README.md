@@ -113,7 +113,7 @@ The program will create a 'MergedFiles' folder and store all the merged files in
 * Calculating the size of json object takes O(1) time
 * The function for checking redundant objects in json array takes O(2n). This function can be included in the program if the elimination of redundancy is desired, although doing this increases the time complexity of whole program to O(n^2).
   * Uncomment [line 90](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/merge_files.py#L90) from [merge_files.py](merge_files.py) to include this function.
-  Or replace the code below on line 57
+  Or replace with the code below on [line 90](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/merge_files.py#L90)
   ```python
   self.redundant_obj()
   ```
