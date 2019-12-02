@@ -87,15 +87,19 @@ Or you can load it in an IDE and run it.
 
 ![](https://github.com/Blank1611/jsonmergeutils/blob/master/screenshot/3rd.PNG)
 
-- Incase the merged files are to be stored in a separate folder change [line 47](https://github.com/Blank1611/jsonmergeutils/blob/0d0f8488754141d11d9f70d88090d34bea52424c/jsonmerge_utils.py#L47) in [jsonmerge_utils](jsonmerge_utils.py)
+- Incase the merged files are to be stored in a separate folder change [line 50-52](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/jsonmerge_utils.py#L50) in [jsonmerge_utils](jsonmerge_utils.py)
 
 from 
 ```python
-merge = Merge(data_dir, output_prefix, max_file_size, merger, root_keys)
+merge = Merge(path_creator(data_dir, input_prefix),
+                      path_creator(data_dir, output_prefix),
+                      max_file_size)
 ```
-to
+to (Copy the code below and replace the code from line[50-52](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/jsonmerge_utils.py#L50))
 ```python
-merge = Merge(output_folder(DATADIR), output_prefix, max_file_size, merger, root_keys)
+merge = Merge(path_creator(data_dir, input_prefix),
+                      path_creator(output_folder(data_dir), output_prefix),
+                      max_file_size)
 ```
 The program will create a 'MergedFiles' folder and store all the merged files in it.
 
@@ -108,8 +112,8 @@ The program will create a 'MergedFiles' folder and store all the merged files in
 * Merging of json arrays is handled by jsonmerge module
 * Calculating the size of json object takes O(1) time
 * The function for checking redundant objects in json array takes O(2n). This function can be included in the program if the elimination of redundancy is desired, although doing this increases the time complexity of whole program to O(n^2).
-  * Uncomment [line 57](https://github.com/Blank1611/jsonmergeutils/blob/9f05fc0bcf2bec8137f675bbfc8181463e320ee6/merge_files.py#L57) from [merge_files.py](merge_files.py) to include this function.
-  Or copy paste the code below on line 57
+  * Uncomment [line 90](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/merge_files.py#L90) from [merge_files.py](merge_files.py) to include this function.
+  Or replace the code below on line 57
   ```python
   self.redundant_obj()
   ```
