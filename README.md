@@ -95,7 +95,7 @@ merge = Merge(path_creator(data_dir, input_prefix),
                       path_creator(data_dir, output_prefix),
                       max_file_size)
 ```
-to (Copy the code below and replace the code from line[50-52](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/jsonmerge_utils.py#L50))
+to (Copy the code below and replace the code from [line 50-52](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/jsonmerge_utils.py#L50))
 ```python
 merge = Merge(path_creator(data_dir, input_prefix),
                       path_creator(output_folder(data_dir), output_prefix),
