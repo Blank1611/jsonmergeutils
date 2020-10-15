@@ -95,7 +95,7 @@ merge = Merge(path_creator(data_dir, input_prefix),
                       path_creator(data_dir, output_prefix),
                       max_file_size)
 ```
-to (Copy the code below and replace the code from [line 50-52](https://github.com/Blank1611/jsonmergeutils/blob/25b7dfb75131b16c35b318684a718989e450625d/jsonmerge_utils.py#L50))
+to (Copy the code below and replace the code from [line 50-52](jsonmerge_utils.py#L50))
 ```python
 merge = Merge(path_creator(data_dir, input_prefix),
                       path_creator(output_folder(data_dir), output_prefix),
@@ -112,8 +112,8 @@ The program will create a 'MergedFiles' folder and store all the merged files in
 * Merging of json arrays is handled by jsonmerge module
 * Calculating the size of json object takes O(1) time
 * The function for checking redundant objects in json array takes O(2n). This function can be included in the program if the elimination of redundancy is desired, although doing this increases the time complexity of whole program to O(n^2).
-  * Uncomment [line 90](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/merge_files.py#L90) from [merge_files.py](merge_files.py) to include this function.
-  Or replace with the code below on [line 90](https://github.com/Blank1611/jsonmergeutils/blob/491df379c279265425d3739a6ee56fbe404e453b/merge_files.py#L90)
+  * Uncomment [line 90](merge_files.py#L90) from [merge_files.py](merge_files.py) to include this function.
+  Or replace with the code below on [line 90](merge_files.py#L90)
   ```python
   self.redundant_obj()
   ```
