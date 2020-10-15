@@ -76,18 +76,18 @@ pip install genson
 ```bash
 python3 jsonmerge_utils.py
 ```
-![](https://github.com/Blank1611/jsonmergeutils/blob/master/screenshot/1st.PNG)
+![](screenshot/1st.PNG)
 
 Or you can load it in an IDE and run it.
 
 * Give the Folder path where the json files are located.
 * Input the 'Input Prefix' of the json files to be processed, the 'Output Prefix' the merged file should be named with, 'Max File         Size' (_**in bytes**_) the merged file should not exceed.
 
-![](https://github.com/Blank1611/jsonmergeutils/blob/master/screenshot/2nd.PNG)
+![](screenshot/2nd.PNG)
 
-![](https://github.com/Blank1611/jsonmergeutils/blob/master/screenshot/3rd.PNG)
+![](screenshot/3rd.PNG)
 
-- Incase the merged files are to be stored in a separate folder change [line 50-52](https://github.com/Blank1611/jsonmergeutils/blob/25b7dfb75131b16c35b318684a718989e450625d/jsonmerge_utils.py#L50) in [jsonmerge_utils](jsonmerge_utils.py)
+- Incase the merged files are to be stored in a separate folder change [line 50-52](jsonmerge_utils.py#L50) in [jsonmerge_utils](jsonmerge_utils.py)
 
 from 
 ```python
