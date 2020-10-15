@@ -1,5 +1,7 @@
 # jsonmergeutils 
-![](https://img.shields.io/github/license/Blank1611/jsonmergeutils) ![](https://img.shields.io/badge/Python-v3%2B-green)
+![](https://img.shields.io/github/license/Blank1611/jsonmergeutils) ![](https://img.shields.io/badge/Python-v3%2B-green) 
+
+![CodeQL](https://github.com/Blank1611/jsonmergeutils/workflows/CodeQL/badge.svg)
 
 Merges a series of files containing JSON array of Objects into a single file containing one JSON object.
 
