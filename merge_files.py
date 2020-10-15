@@ -37,7 +37,9 @@ class Merge:
         self.input_path = input_path
         self.max_file_size = max_file_size
         self.counter = 1
-        self.merger, self.root_keys = merge_object('{}{}'.format(self.input_path, '1.json'), self.max_file_size)
+        self.merger, self.root_keys = merge_object(
+            '{}{}'.format(self.input_path, '1.json'), 
+            self.max_file_size)
 
     def redundant_obj(self):
         """
