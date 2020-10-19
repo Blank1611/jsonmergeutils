@@ -5,10 +5,22 @@ Created on Fri Nov 15 04:21:26 2019
 @author: GRENTOR
 """
 import os
+import logging
 #from tqdm import tqdm
 from merge_files import Merge
-
-
+logger = logging.getLogger(__name__)
+def configure_logger():
+    """
+    configures the logger object
+    """
+    logging.basicConfig(filename='output.log', level=logging.INFO)
+    if not logger.handlers:
+        # Prevent logging from propagating to the root logger
+        logger.propagate = 0
+        log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(log_formatter)
+        logger.addHandler(stream_handler)
 def output_folder(data_dir):
     """
     Creates new output folder for merged files to be stored in
@@ -38,6 +50,7 @@ def main():
     Driver Function
     """
     try:
+        configure_logger()
         data_dir = input('Folder Path: ')
         if not os.path.exists(data_dir):
             raise FolderNotFoundError
@@ -54,11 +67,12 @@ def main():
         merge.merge()
 
     except FileNotFoundError:
-        print('Please check the input prefix !!')
+        logger.error('Please check the input prefix !!')
     except FolderNotFoundError:
-        print('No such directory exists !!')
+        logger.error('No such directory exists !!')
     except ValueError:
-        print('File size larger than given Max File Size !!')
+        logger.error('File size larger than given Max File Size !!')
+
 
 if __name__ == '__main__':
     main()

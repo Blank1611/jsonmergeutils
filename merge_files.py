@@ -4,10 +4,13 @@ Created on Thu Nov 14 14:34:18 2019
 
 @author: GRENTOR
 """
+import logging
 import json
 import os
 from jsonmerge import Merger
 from schema_modified import schema_builder
+
+logger = logging.getLogger("jsonmerge-logger")
 
 def merge_object(data_dir, max_file_size):
     """"
@@ -67,16 +70,16 @@ class Merge:
         end = False
         count = 0
         for i in self.file_list():
-            print(i)
+            logger.info(i)
             with open(i) as input_file:
                 obj = json.load(input_file)
                 self.merge_file(obj, end)
             count += 1
         end = True
         self.merge_file(None, end)
-        print('Done!!')
-        print('{} Files Processed'.format(count))
-        print('{} Result files created'.format(self.counter))
+        logger.info('Done!!')
+        logger.info('%d Files Processed', count)
+        logger.info('%d Result files created', self.counter)
 
     def merge_file(self, head, end):
         """
