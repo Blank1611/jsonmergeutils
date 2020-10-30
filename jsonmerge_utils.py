@@ -5,17 +5,58 @@ Created on Fri Nov 15 04:21:26 2019
 @author: GRENTOR
 """
 import os
+import argparse
+import sys
 import logging
 #from tqdm import tqdm
 from merge_files import Merge
+
+def get_parser():
+    """
+    gets & parses arguments from command line
+    """
+    parser = argparse.ArgumentParser(
+        description="Merges different JSON files into a single JSON object in a new file",
+        add_help=True)
+    parser.add_argument('-ip',
+                        dest = "input_prefix",
+                        help="Input prefix",
+                        required=True)
+    parser.add_argument('-op',
+                        dest = "output_prefix",
+                        help="Output prefix",
+                        required=True)
+    parser.add_argument('-maxFileSize',
+                        dest = "max_file_size",
+                        help="The maximum file size (in bytes) that each merged file should have",
+                        type=int,
+                        required=True
+                        )
+    parser.add_argument('-dir_path',
+                        dest ="data_dir",
+                        help="Path to directory where all json files are stored",
+                        required=True)
+    parser.add_argument('-log_level',
+                        dest="log_level",
+                        help="The logging level - defaults to INFO",
+                        metavar = "{'INFO','DEBUG','ERROR'}",
+                        choices = ['INFO', 'DEBUG', 'ERROR'],
+                        default="INFO")
+    if len(sys.argv) == 1:
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+    return parser.parse_args()
+
+
 logger = logging.getLogger(__name__)
-def configure_logger():
+def configure_logger(log_level):
     """
     configures the logger object
     """
-    logging.basicConfig(filename='output.log', level=logging.INFO)
+    logging.basicConfig(filename='output.log')
     if not logger.handlers:
         # Prevent logging from propagating to the root logger
+        logger.setLevel(log_level)
         logger.propagate = 0
         log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         stream_handler = logging.StreamHandler()
@@ -50,19 +91,17 @@ def main():
     Driver Function
     """
     try:
-        configure_logger()
-        data_dir = input('Folder Path: ')
-        if not os.path.exists(data_dir):
+        args = get_parser()
+        configure_logger(args.log_level)
+        if not os.path.exists(args.data_dir):
             raise FolderNotFoundError
-        input_prefix = input('I/P Prefix: ')
-        if not os.path.isfile('{}{}'.format(path_creator(data_dir, input_prefix), '1.json')):
+        if not os.path.isfile('{}{}'.format
+        (path_creator(args.data_dir, args.input_prefix), '1.json')):
             raise FileNotFoundError
-        output_prefix = input('O/P Prefix: ')
-        max_file_size = int(input('Max File Size: '))
 
-        merge = Merge(path_creator(data_dir, input_prefix),
-                      path_creator(data_dir, output_prefix),
-                      max_file_size)
+        merge = Merge(path_creator(args.data_dir, args.input_prefix),
+                      path_creator(args.data_dir, args.output_prefix),
+                      args.max_file_size)
 
         merge.merge()
 
