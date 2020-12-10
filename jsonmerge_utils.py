@@ -53,13 +53,14 @@ def configure_logger(log_level):
     """
     configures the logger object
     """
-    logging.basicConfig(filename='output.log')
+
     if not logger.handlers:
         # Prevent logging from propagating to the root logger
-        logger.setLevel(log_level)
         logger.propagate = 0
         log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         stream_handler = logging.StreamHandler()
+        logger.setLevel(logging.DEBUG)
+        stream_handler.setLevel(log_level)
         stream_handler.setFormatter(log_formatter)
         logger.addHandler(stream_handler)
 def output_folder(data_dir):
